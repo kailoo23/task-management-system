@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,7 +24,7 @@ public class TaskService {
     public Task createTask(Long userId, Task task) {
         try{
             Optional<User> userOpt = userRepo.findById(userId);
-            if (userOpt.isPresent()) {
+            if (userRepo.findById(userId).isPresent()) {
                 task.setUser(userOpt.get());
                 taskRepo.save(task);
                 log.info("Task created successfully: " + task);
@@ -67,7 +68,7 @@ public class TaskService {
     }
 
     public List<Task> searchTasksByTitle(String title) {
-        return taskRepo.findByTitle(title);
+        return taskRepo.findByTitleContaining(title);
     }
     public List<Task> searchTasksByStatus(String status) {
         return taskRepo.findByStatus(status);
@@ -75,9 +76,12 @@ public class TaskService {
     public List<Task> searchTasksByPriority(int priority) {
         return taskRepo.findByPriority(priority);
     }
+    public List<Task> searchTasksByDueDate(Date date) {
+        return taskRepo.findByDueDate(date);
+    }
     public void deleteTask(Long id) {
         try {
-            if (taskRepo.existsById(id)) {
+            if (taskRepo.findById(id).isPresent()) {
                 taskRepo.deleteById(id);
                 log.info("Task deleted successfully with ID: " + id);
 

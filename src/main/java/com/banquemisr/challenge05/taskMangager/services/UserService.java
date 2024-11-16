@@ -2,7 +2,6 @@ package com.banquemisr.challenge05.taskMangager.services;
 
 import com.banquemisr.challenge05.taskMangager.Exeption.UserException;
 import com.banquemisr.challenge05.taskMangager.entity.User;
-import com.banquemisr.challenge05.taskMangager.repository.TaskRepo;
 import com.banquemisr.challenge05.taskMangager.repository.UserRepo;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;

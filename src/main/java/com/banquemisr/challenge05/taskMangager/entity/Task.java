@@ -1,8 +1,10 @@
 package com.banquemisr.challenge05.taskMangager.entity;
 
+import com.banquemisr.challenge05.taskMangager.enums.Status;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -25,7 +27,8 @@ public class Task {
     private String description;
 
     @Column(nullable = false)
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private Status status;
 
     private Integer priority;
 
@@ -36,7 +39,7 @@ public class Task {
     @JsonBackReference
     private User user;
 
-    public Task(String title, String description, String status, Integer priority, LocalDate dueDate, User user) {
+    public Task(String title, String description, Status status, Integer priority, LocalDate dueDate, User user) {
         this.title = title;
         this.description = description;
         this.status = status;

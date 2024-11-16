@@ -2,11 +2,11 @@ package com.banquemisr.challenge05.taskMangager.controlers;
 
 import com.banquemisr.challenge05.taskMangager.entity.Task;
 import com.banquemisr.challenge05.taskMangager.services.TaskService;
-import com.banquemisr.challenge05.taskMangager.services.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,17 +38,21 @@ public class TaskController {
     public void deleteTaskByID( @PathVariable("id") Long id){
         taskService.deleteTask(id);
     }
-    @GetMapping("/search")
+    @GetMapping("/search/title")
     public ResponseEntity<List<Task>> searchTasksByTitle(@RequestParam(required = false) String title) {
         return ResponseEntity.ok(taskService.searchTasksByTitle(title));
     }
-    @GetMapping("/search")
+    @GetMapping("/search/status")
     public ResponseEntity<List<Task>> searchTasksByStatus(@RequestParam(required = false) String status) {
         return ResponseEntity.ok(taskService.searchTasksByStatus( status));
     }
-    @GetMapping("/search")
+    @GetMapping("/search/priority")
     public ResponseEntity<List<Task>> searchTasksByPriority(@RequestParam(required = false) int priority) {
         return ResponseEntity.ok(taskService.searchTasksByPriority(priority));
+    }
+    @GetMapping("/search/date")
+    public ResponseEntity<List<Task>> searchTasksByPriority(@RequestParam(required = false) Date date) {
+        return ResponseEntity.ok(taskService.searchTasksByDueDate(date));
     }
 
 }

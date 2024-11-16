@@ -3,7 +3,6 @@ package com.banquemisr.challenge05.taskMangager.controlers;
 import com.banquemisr.challenge05.taskMangager.entity.User;
 import com.banquemisr.challenge05.taskMangager.services.UserService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
