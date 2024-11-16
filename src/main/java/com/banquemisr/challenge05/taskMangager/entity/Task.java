@@ -13,6 +13,8 @@ import java.util.Date;
 
 @Data
 @Entity
+@Builder
+@AllArgsConstructor
 @Table(name= "task")
 public class Task {
 

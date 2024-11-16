@@ -1,0 +1,23 @@
+16-11-2024 19:51:45.571 INFO  Could not detect default configuration classes for test class [com.banquemisr.challenge05.taskMangager.TaskMangagerApplicationTests]: TaskMangagerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16-11-2024 19:51:45.771 INFO  Found @SpringBootConfiguration com.banquemisr.challenge05.taskMangager.TaskMangagerApplication for test class com.banquemisr.challenge05.taskMangager.TaskMangagerApplicationTests
+16-11-2024 19:51:45.994 INFO  Restart disabled due to context in which it is running
+16-11-2024 19:51:46.424 INFO  HV000001: Hibernate Validator 8.0.1.Final
+16-11-2024 19:51:46.459 INFO  Starting TaskMangagerApplicationTests using Java 17.0.10 with PID 29380 (started by Khaled.Mohamed in D:\sources\Projecs\taskMangager)
+16-11-2024 19:51:46.553 INFO  No active profile set, falling back to 1 default profile: "default"
+16-11-2024 19:51:48.736 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16-11-2024 19:51:48.864 INFO  Finished Spring Data repository scanning in 115 ms. Found 3 JPA repository interfaces.
+16-11-2024 19:51:50.222 INFO  HHH000204: Processing PersistenceUnitInfo [name: default]
+16-11-2024 19:51:50.369 INFO  HHH000412: Hibernate ORM core version 6.4.4.Final
+16-11-2024 19:51:50.423 INFO  HHH000026: Second-level cache disabled
+16-11-2024 19:51:51.116 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+16-11-2024 19:51:51.175 INFO  HikariPool-1 - Starting...
+16-11-2024 19:51:51.674 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@546c30c2
+16-11-2024 19:51:51.679 INFO  HikariPool-1 - Start completed.
+16-11-2024 19:51:53.480 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16-11-2024 19:51:53.835 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+16-11-2024 19:51:54.616 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
+16-11-2024 19:51:54.619 INFO  HikariPool-1 - Shutdown initiated...
+16-11-2024 19:51:54.643 INFO  HikariPool-1 - Shutdown completed.
+16-11-2024 19:51:54.672 INFO  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.

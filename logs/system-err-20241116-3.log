@@ -1,0 +1,4 @@
+16-11-2024 20:00:38.312 ERROR HHH000478: Unsuccessful: 
+    alter table task 
+       drop 
+       foreign key FK2hsytmxysatfvt0p1992cw449

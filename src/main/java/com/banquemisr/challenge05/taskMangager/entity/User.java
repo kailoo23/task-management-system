@@ -42,7 +42,7 @@ public class User implements UserDetails {
     private Role role;
 
     @Column(nullable = false)
-    private String Email;
+    private String email;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
@@ -53,7 +53,7 @@ public class User implements UserDetails {
         this.username = username;
         this.password = password;
         this.role = role;
-        Email = email;
+        this.email = email;
     }
 
 

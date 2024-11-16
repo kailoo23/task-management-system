@@ -1,0 +1,34 @@
+16-11-2024 19:55:47.430 INFO  HV000001: Hibernate Validator 8.0.1.Final
+16-11-2024 19:55:47.477 INFO  Starting TaskMangagerApplication using Java 17.0.10 with PID 19908 (D:\sources\Projecs\taskMangager\target\classes started by Khaled.Mohamed in D:\sources\Projecs\taskMangager)
+16-11-2024 19:55:47.483 INFO  No active profile set, falling back to 1 default profile: "default"
+16-11-2024 19:55:47.537 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+16-11-2024 19:55:47.538 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+16-11-2024 19:55:48.962 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16-11-2024 19:55:49.022 INFO  Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+16-11-2024 19:55:49.957 INFO  Tomcat initialized with port 9191 (http)
+16-11-2024 19:55:49.974 INFO  Initializing ProtocolHandler ["http-nio-9191"]
+16-11-2024 19:55:49.977 INFO  Starting service [Tomcat]
+16-11-2024 19:55:49.977 INFO  Starting Servlet engine: [Apache Tomcat/10.1.20]
+16-11-2024 19:55:50.067 INFO  Initializing Spring embedded WebApplicationContext
+16-11-2024 19:55:50.068 INFO  Root WebApplicationContext: initialization completed in 2528 ms
+16-11-2024 19:55:50.482 INFO  HHH000204: Processing PersistenceUnitInfo [name: default]
+16-11-2024 19:55:50.541 INFO  HHH000412: Hibernate ORM core version 6.4.4.Final
+16-11-2024 19:55:50.578 INFO  HHH000026: Second-level cache disabled
+16-11-2024 19:55:50.858 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+16-11-2024 19:55:50.888 INFO  HikariPool-1 - Starting...
+16-11-2024 19:55:51.207 INFO  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60ede42d
+16-11-2024 19:55:51.210 INFO  HikariPool-1 - Start completed.
+16-11-2024 19:55:52.414 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16-11-2024 19:55:52.623 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+16-11-2024 19:55:54.731 INFO  Exposing 12 endpoint(s) beneath base path '/actuator'
+16-11-2024 19:55:54.778 INFO  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3328d0aa, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62290ef1, org.springframework.security.web.context.SecurityContextHolderFilter@4c482cc3, org.springframework.security.web.header.HeaderWriterFilter@d698ad9, org.springframework.web.filter.CorsFilter@31eb37cb, org.springframework.security.web.csrf.CsrfFilter@76e0265c, org.springframework.security.web.authentication.logout.LogoutFilter@6425e945, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@53b8b653, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1ad1a5db, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4996504a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@67363d73, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ec234ee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52e82695, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3cce7452, org.springframework.security.web.access.ExceptionTranslationFilter@603f976b, org.springframework.security.web.access.intercept.AuthorizationFilter@706cea1d]
+16-11-2024 19:55:54.975 INFO  LiveReload server is running on port 35729
+16-11-2024 19:55:55.101 INFO  Starting ProtocolHandler ["http-nio-9191"]
+16-11-2024 19:55:55.129 INFO  Tomcat started on port 9191 (http) with context path '/bm/tm'
+16-11-2024 19:55:55.154 INFO  Started TaskMangagerApplication in 8.098 seconds (process running for 10.076)
+16-11-2024 19:55:55.663 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+16-11-2024 19:55:55.663 INFO  Initializing Servlet 'dispatcherServlet'
+16-11-2024 19:55:55.667 INFO  Completed initialization in 3 ms
+16-11-2024 19:57:04.150 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
+16-11-2024 19:57:04.155 INFO  HikariPool-1 - Shutdown initiated...
+16-11-2024 19:57:04.175 INFO  HikariPool-1 - Shutdown completed.
