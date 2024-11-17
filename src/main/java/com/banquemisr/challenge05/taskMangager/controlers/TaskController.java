@@ -1,6 +1,8 @@
 package com.banquemisr.challenge05.taskMangager.controlers;
 
 import com.banquemisr.challenge05.taskMangager.entity.Task;
+import com.banquemisr.challenge05.taskMangager.enums.Priority;
+import com.banquemisr.challenge05.taskMangager.enums.Status;
 import com.banquemisr.challenge05.taskMangager.services.TaskService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +16,7 @@ import java.util.Optional;
 @RequestMapping("/task")
 @AllArgsConstructor
 public class TaskController {
+
 
 
     private final TaskService taskService;
@@ -43,11 +46,11 @@ public class TaskController {
         return ResponseEntity.ok(taskService.searchTasksByTitle(title));
     }
     @GetMapping("/search/status")
-    public ResponseEntity<List<Task>> searchTasksByStatus(@RequestParam(required = false) String status) {
+    public ResponseEntity<List<Task>> searchTasksByStatus(@RequestParam(required = false) Status status) {
         return ResponseEntity.ok(taskService.searchTasksByStatus( status));
     }
     @GetMapping("/search/priority")
-    public ResponseEntity<List<Task>> searchTasksByPriority(@RequestParam(required = false) int priority) {
+    public ResponseEntity<List<Task>> searchTasksByPriority(@RequestParam(required = false) Priority priority) {
         return ResponseEntity.ok(taskService.searchTasksByPriority(priority));
     }
     @GetMapping("/search/date")

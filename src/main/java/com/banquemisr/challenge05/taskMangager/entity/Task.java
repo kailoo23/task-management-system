@@ -1,5 +1,6 @@
 package com.banquemisr.challenge05.taskMangager.entity;
 
+import com.banquemisr.challenge05.taskMangager.enums.Priority;
 import com.banquemisr.challenge05.taskMangager.enums.Status;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
@@ -9,47 +10,38 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.Date;
+import java.util.List;
 
-@Data
 @Entity
-@Builder
+@Data
+@NoArgsConstructor
 @AllArgsConstructor
-@Table(name= "task")
+@Builder
 public class Task {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(nullable = false)
     private String title;
 
-    @Column(length = 500)
+    @Column(nullable = false)
     private String description;
 
-    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private Status status;
 
-    private Integer priority;
+    @Enumerated(EnumType.STRING)
+    private Priority priority;
 
+    @Column(nullable = false)
     private LocalDate dueDate;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
     @JsonBackReference
     private User user;
 
-    public Task(String title, String description, Status status, Integer priority, LocalDate dueDate, User user) {
-        this.title = title;
-        this.description = description;
-        this.status = status;
-        this.priority = priority;
-        this.dueDate = dueDate;
-        this.user = user;
-    }
-
-    public Task() {
-    }
+    @OneToMany(mappedBy = "task", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<History> histories;
 }

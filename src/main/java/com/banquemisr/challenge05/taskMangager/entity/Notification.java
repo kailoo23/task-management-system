@@ -1,7 +1,6 @@
 package com.banquemisr.challenge05.taskMangager.entity;
 
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.banquemisr.challenge05.taskMangager.enums.NotificationType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,23 +14,21 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class History {
+public class Notification {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(nullable = false)
-    private String actionType;
+    private String message;
+
+    @Enumerated(EnumType.STRING)
+    private NotificationType notificationType;
 
     @Column(nullable = false)
     private LocalDateTime timestamp;
 
     @ManyToOne
     @JoinColumn(name = "task_id", nullable = false)
-    @JsonBackReference
     private Task task;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
 }
