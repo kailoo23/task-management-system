@@ -27,7 +27,7 @@ mvn clean install
 
 ### 3. Set Up the Database
 
-If the project uses **MySQL**, create a new database (e.g., `bmtm`), and then configure the connection in the `application.properties` file.
+the project uses **MySQL**, create a new database  with name (`bmtm`), and then configure the connection in the `application.properties` file.
 
 Example:
 
@@ -51,7 +51,6 @@ After the application starts, you can access the API via:
 
 http://localhost:8080
 
-
 #### View Exposed Endpoints
 
 To view all the available API endpoints, you can use Swagger UI at:
@@ -59,5 +58,3 @@ To view all the available API endpoints, you can use Swagger UI at:
 http://localhost:8080/swagger-ui/index.html
 
 This will give you a graphical interface to explore and interact with all the API endpoints exposed by the application.
-
----
