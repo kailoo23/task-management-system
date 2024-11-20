@@ -3,6 +3,7 @@ package com.banquemisr.challenge05.taskMangager.entity;
 import com.banquemisr.challenge05.taskMangager.enums.Priority;
 import com.banquemisr.challenge05.taskMangager.enums.Status;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -35,6 +36,7 @@ public class Task {
     private Priority priority;
 
     @Column(nullable = false)
+    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate dueDate;
 
     @ManyToOne
