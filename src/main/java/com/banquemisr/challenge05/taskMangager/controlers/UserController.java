@@ -1,12 +1,7 @@
 package com.banquemisr.challenge05.taskMangager.controlers;
 
-import com.banquemisr.challenge05.taskMangager.entity.AuthenticationRequest;
-import com.banquemisr.challenge05.taskMangager.entity.AuthenticationResponce;
-import com.banquemisr.challenge05.taskMangager.entity.RegisterRequest;
 import com.banquemisr.challenge05.taskMangager.entity.User;
-import com.banquemisr.challenge05.taskMangager.services.AuthenticationService;
 import com.banquemisr.challenge05.taskMangager.services.UserService;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

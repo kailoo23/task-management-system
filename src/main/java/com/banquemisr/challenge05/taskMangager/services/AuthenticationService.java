@@ -21,14 +21,14 @@ public class AuthenticationService {
     private final JWTservice jwtService;
     private final AuthenticationManager authenticationManager;
 
-    public AuthenticationResponce register(RegisterRequest request) {
+    public AuthenticationResponce register(User request) {
         var user = User
                 .builder()
                 .name(request.getName())
                 .username(request.getUsername())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
-                .role(Role.USER)
+                .role(request.getRole())
                 .build();
         userRepo.save(user);
         var jwtToken = jwtService.generateToken(user);

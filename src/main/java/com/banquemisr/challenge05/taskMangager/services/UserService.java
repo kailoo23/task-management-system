@@ -5,6 +5,7 @@ import com.banquemisr.challenge05.taskMangager.entity.User;
 import com.banquemisr.challenge05.taskMangager.repository.UserRepo;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,11 +17,9 @@ import java.util.Optional;
 public class UserService {
 
     private final UserRepo userRepo;
+    private final PasswordEncoder passwordEncoder;
 
 
-    public User createUser(User user) {
-        return userRepo.save(user);
-    }
 
     public Optional<User> getUserByID(Long id) {
         return userRepo.findById(id);
@@ -37,7 +36,7 @@ public class UserService {
                 User existingUser = existingUserOpt.get();
                 existingUser.setName(updatedUser.getName());
                 existingUser.setUsername(updatedUser.getUsername());
-                existingUser.setPassword(updatedUser.getPassword());
+                existingUser.setPassword(passwordEncoder.encode(updatedUser.getPassword()));
                 existingUser.setRole(updatedUser.getRole());
                 existingUser.setEmail(updatedUser.getEmail());
                 return userRepo.save(existingUser);

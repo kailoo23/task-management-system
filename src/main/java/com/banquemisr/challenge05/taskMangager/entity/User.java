@@ -1,6 +1,7 @@
 package com.banquemisr.challenge05.taskMangager.entity;
 
 import com.banquemisr.challenge05.taskMangager.enums.Role;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -46,12 +47,12 @@ public class User implements UserDetails {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
+    @JsonIgnore
     private List<Task> tasks;
 
-    public User(String name, String username, String password, Role role, String email) {
+    public User(String name, String username, Role role, String email) {
         this.name = name;
         this.username = username;
-        this.password = password;
         this.role = role;
         this.email = email;
     }
