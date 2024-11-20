@@ -2,7 +2,6 @@ package com.banquemisr.challenge05.taskMangager.controlers;
 
 import com.banquemisr.challenge05.taskMangager.entity.AuthenticationRequest;
 import com.banquemisr.challenge05.taskMangager.entity.AuthenticationResponce;
-import com.banquemisr.challenge05.taskMangager.entity.RegisterRequest;
 import com.banquemisr.challenge05.taskMangager.entity.User;
 import com.banquemisr.challenge05.taskMangager.services.AuthenticationService;
 import lombok.RequiredArgsConstructor;
