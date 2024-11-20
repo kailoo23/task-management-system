@@ -17,6 +17,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class History {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -37,4 +38,5 @@ public class History {
     @JoinColumn(name = "user_id", nullable = false)
     @JsonIgnore
     private User user;
+
 }
