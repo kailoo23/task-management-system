@@ -8,7 +8,6 @@ import io.jsonwebtoken.security.Keys;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import org.springframework.security.core.GrantedAuthority;
-
 import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
@@ -56,7 +55,7 @@ public class JWTservice {
                 .map(GrantedAuthority::getAuthority)
                 .collect(Collectors.toList()))
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 24))
+                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 24))
                 .signWith(getSigningKey(), io.jsonwebtoken.SignatureAlgorithm.HS256)
                 .compact();
     }
