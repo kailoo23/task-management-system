@@ -29,6 +29,10 @@ public class TaskController {
     public ResponseEntity<Task> createTask(@PathVariable Long userId, @RequestBody Task task) {
         return ResponseEntity.ok(taskService.createTask(userId, task));
     }
+    @PutMapping("/{id}")
+    public void UpdateTask(@PathVariable Long taskId, @RequestBody Task task) {
+        taskService.updateTask(taskId, task);
+    }
     @GetMapping("/all")
     public ResponseEntity<List<Task>>  findAllTasks() {
         return ResponseEntity.ok(taskService.getAllTasks());

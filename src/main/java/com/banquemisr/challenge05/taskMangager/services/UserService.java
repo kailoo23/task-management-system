@@ -49,7 +49,7 @@ public class UserService {
         }
     }
 
-    public void deleteUser(Long id) {
+    public String deleteUser(Long id) {
         try {
             if (userRepo.existsById(id)) {
                 userRepo.deleteById(id);
@@ -59,6 +59,7 @@ public class UserService {
         }catch (Exception e){
             log.error(e.getStackTrace());
         }
+        return "User deleted successfully with ID: " + id;
     }
 
 }
