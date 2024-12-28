@@ -6,9 +6,9 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - mysql
+      - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/bmtm
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/bmtm
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
     networks:
@@ -25,7 +25,7 @@ services:
     networks:
       - app-network
     volumes:
-      - mysql_data:/var/lib/mysql
+      - db_data:/var/lib/mysql
 
 networks:
   app-network:
